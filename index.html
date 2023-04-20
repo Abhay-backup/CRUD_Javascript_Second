@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crud.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="icon" href="img/favicon.jpg" />
+    
+        <title>CRUD Operation</title>
+</head>
+
+<body>
+    <div class="header">
+        <h5>C R U D</h5>
+    </div>
+<style>
+   
+</style>
+    <div class="upper-btn-box">
+        <div class="left-box">
+            <button id="add-btn" style="border-radius: 10px;"><i class="fa fa-plus" >ADD Em ployee</i></button>
+            <!-- <button style="background-color: #33B5E6;"><i class="fa fa-eraser"> Clear</i></button> -->
+        </div>
+        <!-- <div class="right-box">
+                <i class="fa fa-search"></i>
+                <input type="text" id="empID" placeholder="Enter Employee Name">
+                <button style="background-color: darkorange; border-radius: 3px;">Search</button>
+            </div> -->
+    </div>
+
+    <div class="table-box" style="height: 1000px;">
+        <table >
+            <tr>
+                <th>Sr No</th>
+                <th>Profile</th>
+                <th>UserName</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Contact No</th>
+                <th>Industries</th>
+                <th>Desgnation</th>
+                <th>Skill</th>
+                <th>EDIT / DELETE</th>
+            </tr>
+            <tbody id="table-data" style="z-index: 5;">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="model">
+        <i class="fa fa-times-circle close-icon" style="cursor: pointer;"></i>
+        <div class="left-model">
+            <div class="img-box">
+                <img src="img/images.jpg" id="profile-pic" width="150" height="150">
+                <i class="fa fa-plus"></i>
+                <input type="file" id="upload-field">
+            </div>
+        </div>
+        <div class="right-model">
+          <form id="register-form">
+            <div class="input-box">
+                <label for="UserName">UserName</label>
+                <input type="text" required id="UserName">
+                
+            </div>
+            <div class="input-box">
+                <label for="FirstName">FirstName</label>
+                <input type="text" required id="FirstName">
+            </div>
+            <div class="input-box">
+                <label for="LastName">LastName</label>
+                <input type="text" required id="LastName">
+            </div>
+            <div class="input-box">
+                <label for="Email">Email</label>
+                <input type="text" required id="Email">
+            </div>
+            <div class="input-box">
+                <label for="Contact-No">Contact No</label>
+                <input type="text" required id="Contact-No">
+            </div>
+            <div class="input-box">
+                <label for="Industries">Industries</label>
+                <input type="text" required id="Industries">
+            </div>
+            <div class="input-box">
+                <label for="Desgnation">Desgnation</label>
+                <input type="text" required id="Desgnation">
+            </div>
+            <div class="input-box">
+                <label for="Skill">Skill</label>
+                <input type="text" required id="Skill">
+            </div>
+           <div class="input-box">
+            <button id="register-btn">Register</button>
+            <button id="update-btn" disabled style="background-color: coral;">Update</button>
+           </div>
+          </form>
+        </div>
+
+    </div>
+
+    <script src="crud.js"></script>
+</body>
+
+</html>
